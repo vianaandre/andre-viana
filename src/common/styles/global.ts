@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${({ theme }) => theme.fonts.styles.default};
     }
     html {
-        font-size: 62.5%; // 16px = 1.6rem
+        font-size: 1rem; // 16px = 1.6rem
     }
     body {
         -webkit-font-smoothing: antialiased;
@@ -30,8 +30,12 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: ${({ theme }) => theme.colors.shape}
     }
-    ol, ul {
+    ol, ul, li {
 	    list-style: none;
+        list-style-type: none;
+    }
+    ul {
+        padding-left: 0;
     }
     [disabled] {
         opacity: 0.6;
