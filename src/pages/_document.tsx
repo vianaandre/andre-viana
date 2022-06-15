@@ -1,0 +1,112 @@
+// eslint-disable-next-line no-use-before-define
+import React from 'react';
+import Document, {
+    DocumentContext,
+    DocumentInitialProps,
+    Head,
+    Html,
+    Main,
+    NextScript,
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+
+export default class MyDocument extends Document {
+    static async getInitialProps(
+        ctx: DocumentContext
+    ): Promise<DocumentInitialProps> {
+        const sheet = new ServerStyleSheet();
+        const originalRenderPage = ctx.renderPage;
+
+        try {
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: (App) => (props) =>
+                        sheet.collectStyles(<App {...props} />),
+                });
+
+            const initialProps = await Document.getInitialProps(ctx);
+            return {
+                ...initialProps,
+                styles: [
+                    <React.Fragment key={initialProps.html}>
+                        {initialProps.styles}
+                        {sheet.getStyleElement()}
+                    </React.Fragment>,
+                ],
+            };
+        } finally {
+            sheet.seal();
+        }
+    }
+
+    render(): JSX.Element {
+        return (
+            <Html lang="PT-BR">
+                <Head>
+                    <meta charSet="utf-8" />
+                    <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+                    <meta name="theme-color" content="" />
+                    <meta name="language" content="" />
+                    <meta
+                        httpEquiv="Content-Type"
+                        content="text/html; charset=utf-8"
+                    />
+                    <meta property="og:title" content="André // Portfólio" />
+                    <meta property="og:image" content="" />
+                    <meta property="og:image:type" content="" />
+                    <meta property="og:url" content="" />
+                    <meta
+                        property="og:site_name"
+                        content="André // Portfólio"
+                    />
+                    <meta property="og:description" content="" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:locale:alternate" content="pt-BR" />
+                    <meta property="og:locale:alternate" content="en_US" />
+                    <meta property="og:locale:alternate" content="es-ES" />
+                    <meta name="twitter:card" content="summary" />
+                    <meta name="twitter:url" content="" />
+                    <meta name="twitter:title" content="André // Porrfólio" />
+                    <meta name="twitter:description" content="" />
+                    <meta name="twitter:image" content="" />
+                    <link
+                        rel="shortcut icon"
+                        href="favicon.ico"
+                        type="image/x-icon"
+                    />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.googleapis.com"
+                    />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.gstatic.com"
+                        crossOrigin="true"
+                    />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+                        rel="stylesheet"
+                    />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.googleapis.com"
+                    />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.gstatic.com"
+                        crossOrigin="true"
+                    />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+                        rel="stylesheet"
+                    />
+                </Head>
+
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
+}
