@@ -5,6 +5,7 @@ import { GlobalStyle } from 'common/styles/global';
 import { Sidebar } from 'components/Sidebar';
 import { settings } from 'config/settings';
 import { MouseHelper } from 'components/MouseHelper';
+import { Footer } from 'components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Sidebar data={settings.info} />
             <MouseHelper />
             <Component {...pageProps} />
+            <Footer />
         </ThemeProvider>
     );
 }

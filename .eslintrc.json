@@ -54,6 +54,14 @@
             }
         ],
         "no-use-before-define": "off",
-        "no-unused-expressions": "off"
+        "no-unused-expressions": "off",
+        "jsx-a11y/label-has-for": [
+            "error",
+            {
+                "required": {
+                    "some": ["nesting", "id"]
+                }
+            }
+        ]
     }
 }

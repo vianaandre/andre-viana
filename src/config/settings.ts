@@ -3,6 +3,8 @@ export const settings = {
         name: 'André Gustavo Viana',
         email: 'andredapperviana@gmail.com',
         office: 'Desenvolvedor Full Stack',
+        phone: '+55 (45) 988379284',
+        website: 'www.andreviana.com.br',
     },
     menu: [
         {

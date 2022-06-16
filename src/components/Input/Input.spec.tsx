@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
-import { Intro } from './Intro';
+import { Input } from './Input';
 
 describe('<Sidebar />', () => {
     it('', () => {
-        render(<Intro />);
+        render(<Input error="" />);
     });
 });

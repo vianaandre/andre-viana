@@ -1,15 +1,24 @@
+import React, { useState } from 'react';
 import { settings } from 'config/settings';
 import { ContainerSidebar, ContainerMenu, ContainerInfo } from './styles';
 import { ISidebar } from './interface';
 
 export const Sidebar: React.FC<ISidebar> = ({ data }) => {
+    const [isLinkActive, setIsLinkActive] = useState<string>('');
+
     return (
         <ContainerSidebar>
             <ContainerMenu>
                 <ul>
                     {settings.menu.map(({ link, named }) => (
-                        <li key={link}>
-                            <a href={link}>
+                        <li
+                            key={link}
+                            className={isLinkActive === link ? 'isActive' : ''}
+                        >
+                            <a
+                                href={link}
+                                onClick={() => setIsLinkActive(link)}
+                            >
                                 <p>{named}</p>
                             </a>
                         </li>

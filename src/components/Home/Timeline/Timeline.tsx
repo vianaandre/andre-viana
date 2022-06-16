@@ -13,6 +13,7 @@ export const Timeline: React.FC<ITimeline> = ({ text, isLastLine }) => {
         <ContainerTimeline
             onMouseOut={() => setIsFocused(false)}
             onMouseOver={() => setIsFocused(true)}
+            isLastLine={isLastLine}
         >
             <div className={`year ${isFocused ? 'isActive' : ''}`}>
                 <p>{new Date().getFullYear()}</p>

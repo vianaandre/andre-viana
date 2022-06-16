@@ -20,6 +20,8 @@ export const ContainerMy = styled.div`
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     animation: AnimationMyPhoto 6s ease-in-out infinite;
 
+    z-index: ${({ theme }) => theme.zIndex.menu};
+
     @keyframes AnimationMyPhoto {
         0% {
             box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);

@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
-import { Intro } from './Intro';
+import { Stacks } from './Stacks';
 
 describe('<Sidebar />', () => {
     it('', () => {
-        render(<Intro />);
+        render(<Stacks />);
     });
 });

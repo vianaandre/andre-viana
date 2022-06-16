@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IContainerLine } from './interface';
 
-export const ContainerTimeline = styled.div`
+export const ContainerTimeline = styled.div<IContainerLine>`
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -9,7 +9,8 @@ export const ContainerTimeline = styled.div`
 
     position: relative;
 
-    padding-bottom: ${({ theme }) => theme.spacing(6)};
+    padding-bottom: ${({ theme, isLastLine }) =>
+        isLastLine ? 0 : theme.spacing(6)};
     padding-left: ${({ theme }) => theme.spacing(6.5)};
 
     cursor: pointer;

@@ -71,7 +71,7 @@ export default class MyDocument extends Document {
                     <meta name="twitter:image" content="" />
                     <link
                         rel="shortcut icon"
-                        href="favicon.ico"
+                        href="favicon.svg"
                         type="image/x-icon"
                     />
                     <link

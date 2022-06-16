@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
-import { Intro } from './Intro';
+import { CardStack } from './CardStack';
 
 describe('<Sidebar />', () => {
     it('', () => {
-        render(<Intro />);
+        render(<CardStack title="teste" image="" />);
     });
 });

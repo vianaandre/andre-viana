@@ -5,6 +5,8 @@ import { Intro } from 'components/Home/Intro';
 import { About } from 'components/Home/About';
 import { Career } from 'components/Home/Career';
 import { My } from 'components/Home/My';
+import { Stacks } from 'components/Home/Stacks';
+import { Contact } from 'components/Home/Contact';
 
 const Home: NextPage = () => {
     return (
@@ -18,6 +20,8 @@ const Home: NextPage = () => {
                 <div className="content-page">
                     <About />
                     <Career />
+                    <Stacks />
+                    <Contact />
                 </div>
             </main>
         </ContainerHome>

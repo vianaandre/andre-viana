@@ -6,7 +6,7 @@ import { ContainerIntro } from './styles';
 
 export const Intro: React.FC = () => {
     return (
-        <ContainerIntro>
+        <ContainerIntro id="home">
             <div className="information">
                 <Info />
             </div>

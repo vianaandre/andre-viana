@@ -5,7 +5,7 @@ import { Button } from '../../Button';
 
 export const About: React.FC = () => {
     return (
-        <ContainerAbout>
+        <ContainerAbout id="about">
             <Title title="Sobre Mim" />
             <ContainerContent>
                 <p>

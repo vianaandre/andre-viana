@@ -36,7 +36,7 @@ export const ContainerMenu = styled.nav`
             }
             &:hover::after {
                 transition: 400ms;
-                width: 100%;
+                width: 80%;
             }
             p {
                 position: relative;
@@ -47,6 +47,9 @@ export const ContainerMenu = styled.nav`
                 font-size: ${({ theme }) => theme.fonts.sizes.heading04};
                 font-family: ${({ theme }) => theme.fonts.styles.title};
                 font-weight: bold;
+            }
+            &.isActive::after {
+                width: 80%;
             }
         }
     }
