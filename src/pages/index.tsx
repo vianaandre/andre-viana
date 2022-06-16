@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { ContainerHome } from 'common/styles/pages/home';
-import { Sidebar } from 'components/Sidebar';
-import { settings } from 'config/settings';
+import { Intro } from 'components/Home/Intro';
+import { About } from 'components/Home/About';
+import { Career } from 'components/Home/Career';
+import { My } from 'components/Home/My';
 
 const Home: NextPage = () => {
     return (
@@ -11,7 +13,12 @@ const Home: NextPage = () => {
                 <title>André // Portfólio</title>
             </Head>
             <main>
-                <Sidebar data={settings.info} />
+                <Intro />
+                <My />
+                <div className="content-page">
+                    <About />
+                    <Career />
+                </div>
             </main>
         </ContainerHome>
     );

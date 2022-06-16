@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         -webkit-font-smoothing: antialiased;
         font-size: 1.6rem;
+        background-color: ${({ theme }) => theme.colors.primary_dark};
     }
     body, input, textarea, button {
         font-weight: normal;

@@ -5,6 +5,7 @@ export const ContainerSidebar = styled.div`
     top: 0;
     left: 0;
     height: 100vh;
+    overflow: auto;
     width: ${({ theme }) => theme.spacing(31.25)};
     background-color: ${({ theme }) => theme.colors.primary_dark};
 

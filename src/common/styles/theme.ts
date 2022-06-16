@@ -33,9 +33,11 @@ export const theme = {
         primary_dark: '#030F30',
 
         title: '#FFFFFF',
-        text: '#CCCCCC',
+        text: '#E0E0E0',
         text_placeholder: 'rgba(204, 204, 204, 0.5)',
         text_input: '#FFFFFF',
+
+        button: '#FFFFFF',
 
         gray_50: '#F5F5F5',
         gray_75: '#EBEBEB',
