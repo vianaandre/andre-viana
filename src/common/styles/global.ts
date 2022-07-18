@@ -3,6 +3,17 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
 
+    *::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+    }
+
+    /* Handle */
+    *::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.colors.primary};
+        border-radius: 6px;
+    }
+
     * {
         scroll-behavior: smooth;
         margin: 0;
@@ -35,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.colors.shape}
     }
     ol, ul, li {
-	    list-style: none;
+        list-style: none;
         list-style-type: none;
     }
     ul {

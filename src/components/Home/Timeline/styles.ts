@@ -9,8 +9,7 @@ export const ContainerTimeline = styled.div<IContainerLine>`
 
     position: relative;
 
-    padding-bottom: ${({ theme, isLastLine }) =>
-        isLastLine ? 0 : theme.spacing(6)};
+    padding-bottom: ${({ theme, isLastLine }) => (isLastLine ? 0 : theme.spacing(6))};
     padding-left: ${({ theme }) => theme.spacing(6.5)};
 
     cursor: pointer;

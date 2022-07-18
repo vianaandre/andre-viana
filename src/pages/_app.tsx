@@ -8,15 +8,15 @@ import { MouseHelper } from 'components/MouseHelper';
 import { Footer } from 'components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Sidebar data={settings.info} />
-            <MouseHelper />
-            <Component {...pageProps} />
-            <Footer />
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Sidebar data={settings.info} />
+      <MouseHelper />
+      <Component {...pageProps} />
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;

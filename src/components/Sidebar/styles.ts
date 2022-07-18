@@ -41,8 +41,7 @@ export const ContainerMenu = styled.nav`
             p {
                 position: relative;
                 z-index: 1;
-                padding: ${({ theme }) =>
-                    `${theme.spacing(0.5)} ${theme.spacing(1)}`};
+                padding: ${({ theme }) => `${theme.spacing(0.5)} ${theme.spacing(1)}`};
                 width: 100%;
                 font-size: ${({ theme }) => theme.fonts.sizes.heading04};
                 font-family: ${({ theme }) => theme.fonts.styles.title};

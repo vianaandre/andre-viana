@@ -8,8 +8,7 @@
         "plugin:react/recommended",
         "airbnb",
         "next/core-web-vitals",
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -21,6 +20,7 @@
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
+        "no-shadow": "off",
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "react/jsx-filename-extension": [
@@ -62,6 +62,8 @@
                     "some": ["nesting", "id"]
                 }
             }
-        ]
+        ],
+        "react/jsx-key": "off",
+        "import/no-unresolved": "off"
     }
 }

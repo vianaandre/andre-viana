@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerHome = styled.div`
+export const Container = styled.div`
     margin-left: ${({ theme }) => theme.spacing(31.25)};
 
     div.content-page {
