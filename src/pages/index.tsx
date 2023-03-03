@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
-import { Title } from 'components/Title';
+
+import { Base } from 'layouts/Base';
+import { Apresentation } from 'components/Apresentation';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Title title="Hello Word!" />
-    </div>
+    <Base>
+      <Apresentation />
+    </Base>
   );
 };
 

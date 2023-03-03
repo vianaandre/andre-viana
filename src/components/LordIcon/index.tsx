@@ -1,0 +1,1 @@
+export { LordIcon } from './LordIcon';
