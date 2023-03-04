@@ -1,14 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-    *::-webkit-scrollbar {
+    /* *::-webkit-scrollbar {
         width: 6px;
         height: 8px;
     }
     *::-webkit-scrollbar-thumb {
         background: ${({ theme }) => theme.colors.purble.main};
         border-radius: 6px;
-    }
+    } */
     * {
         margin: 0;
         padding: 0;
@@ -60,5 +60,37 @@ export const GlobalStyles = createGlobalStyle`
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
+    }
+    h2.title {
+        font-size: ${({ theme }) => theme.fonts.sizes[36]};
+        font-weight: ${({ theme }) => theme.fonts.weight.bold};
+        font-style: normal;
+        color: ${({ theme }) => theme.colors.primary.dark};
+        line-height: ${({ theme }) => theme.fonts.height[150]};
+    }
+    h4.title {
+        font-size: ${({ theme }) => theme.fonts.sizes[24]};
+        font-weight: ${({ theme }) => theme.fonts.weight.medium};
+        font-style: normal;
+        color: ${({ theme }) => theme.colors.primary.dark};
+        line-height: ${({ theme }) => theme.fonts.height[125]};
+    }
+    div.content {
+        padding: 0px ${({ theme }) => theme.spacing(20)};
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        @media(max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+            padding: 0px;
+        }
+    }
+    ::-moz-selection { /* Code for Firefox */
+        color: ${({ theme }) => theme.colors.primary.main};
+        background: ${({ theme }) => theme.colors.purble.main};
+    }
+
+    ::selection {
+        color: ${({ theme }) => theme.colors.primary.main};
+        background: ${({ theme }) => theme.colors.purble.main};
     }
 `;

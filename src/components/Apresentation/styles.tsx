@@ -5,6 +5,9 @@ export const ContainerApresentation = styled.div`
     min-height: 400px;
     display: flex;
     align-items: center;
+    div.content {
+        flex-direction: column;
+    }
     h2 {
         font-size: ${({ theme }) => theme.fonts.sizes[48]};
         font-style: normal;

@@ -4,6 +4,7 @@ export const theme = {
   },
   colors: {
     grey: {
+      dark: '#7A797D',
       main: '#565660',
     },
     primary: {
@@ -13,6 +14,7 @@ export const theme = {
     },
     purble: {
       main: '#5F49E3',
+      light: 'rgba(95, 73, 227, 0.1)',
     },
     pink: {
       main: '#FF80BF',
@@ -47,6 +49,7 @@ export const theme = {
       56: '3.5rem',
       48: '3rem',
       40: '2.5rem',
+      36: '2.25rem',
       32: '2rem',
       24: '1.5rem',
       20: '1.25rem',
