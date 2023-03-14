@@ -135,7 +135,7 @@ export const Form: React.FC = () => {
           />
           <Toast.Title className="title">
             <h6>E-mail enviado!</h6>
-            <p>Verifique a caixa de entrada do seu e-mail.</p>
+            <p>Agradeço por entrar em contato. Retornarei em breve.</p>
           </Toast.Title>
           <Toast.Action asChild altText="Goto schedule to undo">
             <button type="button">
