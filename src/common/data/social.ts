@@ -15,6 +15,6 @@ export const socialLinks = [
   },
   {
     type: SocialProps.WHATSAPP,
-    link: '#',
+    link: 'https://wa.me/5545988378294',
   },
 ];
