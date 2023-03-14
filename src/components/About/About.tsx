@@ -61,10 +61,11 @@ export const AboutLayout: React.FC = () => {
                 <br />
                 Nascido no Brasil e com 20 anos de idade, tenho uma grande paixão pelo desenvolvimento front-end, em especial a criação de aplicações web. Nos meus momentos de lazer, costumo assistir filmes e séries.
               </p>
-              <Link href="#">
+              <Link href="CV-Andre.pdf" download role="button">
                 <a
                   onMouseEnter={() => lottieIconArticle?.current?.play()}
                   onMouseLeave={() => lottieIconArticle?.current?.stop()}
+                  target="_blank"
                 >
                   Download CV
                   <Lottie
