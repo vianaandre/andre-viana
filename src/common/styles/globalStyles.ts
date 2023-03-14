@@ -93,4 +93,126 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.colors.primary.main};
         background: ${({ theme }) => theme.colors.purble.main};
     }
+    .tooltip_footer {
+        p {
+            font-size: ${({ theme }) => theme.fonts.sizes[12]};
+            font-weight: 400;
+            font-style: normal;
+            color:${({ theme }) => theme.colors.primary.dark};
+            padding: 2px 6px;
+            background-color: ${({ theme }) => theme.colors.primary.main};
+            border: 1px solid ${({ theme }) => theme.colors.primary.dark};
+        }
+    }
+    .toast_viewport {
+        --viewport-padding: 25px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: var(--viewport-padding);
+        gap: 10px;
+        width: 390px;
+        max-width: 100vw;
+        margin: 0;
+        list-style: none;
+        z-index: 2147483647;
+        outline: none;
+        li {
+            border: 1px solid ${({ theme }) => theme.colors.success};
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding: ${({ theme }) => theme.spacing(2)};
+            padding-top: ${({ theme }) => theme.spacing(1.5)};
+            gap: ${({ theme }) => theme.spacing(1.5)};
+            .title {
+                padding-top: 4px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                h6 {
+                    font-size: ${({ theme }) => theme.fonts.sizes[16]};
+                    font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                    font-family: ${({ theme }) => theme.fonts.family.primary};
+                    color: ${({ theme }) => theme.colors.primary.dark}
+                }
+                p {
+                    font-size: ${({ theme }) => theme.fonts.sizes[14]};
+                    font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                    font-family: ${({ theme }) => theme.fonts.family.primary};
+                    color: ${({ theme }) => theme.colors.grey.dark};
+                }
+            }
+            button {
+                position: absolute;
+                right: ${({ theme }) => theme.spacing(1)};
+                top: ${({ theme }) => theme.spacing(1)};
+                padding: 4px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: ${({ theme }) => theme.transitions.medium};
+                &:hover {
+                    background-color: ${({ theme }) => theme.colors.primary.light};
+                    transition: ${({ theme }) => theme.transitions.medium};
+                }
+            }
+        }
+    }
+    .toast_root {
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: none;
+        padding: 15px;
+        display: grid;
+        grid-template-areas: 'title action' 'description action';
+        grid-template-columns: auto max-content;
+        column-gap: 15px;
+        align-items: center;
+    }
+    .toast_root[data-state='open'] {
+        animation: slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .toast_root[data-state='closed'] {
+        animation: hide 100ms ease-in;
+    }
+    .toast_root[data-swipe='move'] {
+        transform: translateX(var(--radix-toast-swipe-move-x));
+    }
+    .toast_root[data-swipe='cancel'] {
+        transform: translateX(0);
+        transition: transform 200ms ease-out;
+    }
+    .toast_root[data-swipe='end'] {
+        animation: swipeOut 100ms ease-out;
+    }
+    @keyframes hide {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateX(calc(100% + var(--viewport-padding)));
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes swipeOut {
+        from {
+            transform: translateX(var(--radix-toast-swipe-end-x));
+        }
+        to {
+            transform: translateX(calc(100% + var(--viewport-padding)));
+        }
+    }
+
 `;

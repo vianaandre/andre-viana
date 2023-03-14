@@ -14,9 +14,4 @@ export const menuOptions = [
     text: 'contato',
     alternative: 'contact',
   },
-  {
-    link: '/documents',
-    text: 'documentação',
-    alternative: 'documents',
-  },
 ];

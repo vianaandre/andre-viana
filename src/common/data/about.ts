@@ -9,7 +9,7 @@ export const career = [
     time: 'Agosto 2022 - Presente • 7 meses',
   },
   {
-    office: 'Desenvolvedor Frontend',
+    office: 'Desenvolvedor Front-end',
     company: {
       text: 'Private Code',
       link: 'https://privatecode.com.br/',

@@ -16,12 +16,26 @@ export const ContainerAbout = styled.section`
         div.info_about {
             margin-top: ${({ theme }) => theme.spacing(4)};
             display: flex;
+            @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: ${({ theme }) => theme.spacing(5)};
+                img {
+                    min-width: fit-content !important;
+                }
+            }
+            img {
+                border-radius: 4px !important;
+            }
             div.text {
                 flex: 1;
                 padding-left: ${({ theme }) => theme.spacing(4)};
                 display: flex;
                 flex-direction: column;
                 height: 380px;
+                @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                    padding-left: 0px;
+                }
                 p {
                     font-size: ${({ theme }) => theme.fonts.sizes[16]};
                     font-weight: 400;
@@ -50,6 +64,9 @@ export const ContainerAbout = styled.section`
                         display: flex;
                         padding-left: ${({ theme }) => theme.spacing(5.5)};
                         position: absolute;
+                    }
+                    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                        margin-top: ${({ theme }) => theme.spacing(3.5)};
                     }
                 }
             }

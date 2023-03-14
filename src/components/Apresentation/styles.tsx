@@ -5,6 +5,9 @@ export const ContainerApresentation = styled.div`
     min-height: 400px;
     display: flex;
     align-items: center;
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        height: calc(100vh - 121px - 51px);
+    }
     div.content {
         flex-direction: column;
     }
@@ -14,6 +17,26 @@ export const ContainerApresentation = styled.div`
         font-weight: ${({ theme }) => theme.fonts.weight.bold};
         color: ${({ theme }) => theme.colors.primary.dark};
         margin-bottom: ${({ theme }) => theme.spacing(1.5)};
+        @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+            font-size: ${({ theme }) => theme.fonts.sizes[36]};
+        }
+    }
+    div.office {
+        height: 28px;
+        display: flex;
+        gap: 6px;
+        margin-bottom: 4px;
+        strong {
+            position: relative;
+            &::after {
+                content: "";
+                width: 100%;
+                display: block;
+                bottom: 0;
+                height: 1px;
+                background-color: ${({ theme }) => theme.colors.primary.dark};
+            }
+        }
     }
     p {
         font-size: ${({ theme }) => theme.fonts.sizes[20]};
@@ -85,6 +108,11 @@ export const ContainerApresentationButtons = styled.div`
     align-items: center;
     gap: ${({ theme }) => theme.spacing(14)};
     margin-top: ${({ theme }) => theme.spacing(6.5)};
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        gap: ${({ theme }) => theme.spacing(6)};
+        flex-direction: column;
+        align-items: flex-start;
+    }
     a {
         .the-arrow {
             width: 64px;

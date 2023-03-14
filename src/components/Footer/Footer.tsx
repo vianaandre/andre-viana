@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import Link from 'next/link';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 import { socialLinks } from 'common/data/social';
 import { Email } from 'components/Icons/Email';
@@ -31,13 +32,25 @@ export const Footer: React.FC = () => {
       <Container>
         <ul>
           {socialLinks.map((item) => (
-            <li key={item.link}>
-              <Link href={item.link}>
-                <a target="_black">
-                  {findIconPerType(item.type)}
-                </a>
-              </Link>
-            </li>
+            <Tooltip.Provider key={item.link} delayDuration={100}>
+              <Tooltip.Root>
+                <Tooltip.Trigger asChild>
+                  <li>
+                    <Link href={item.link}>
+                      <a target="_black">
+                        {findIconPerType(item.type)}
+                      </a>
+                    </Link>
+                  </li>
+                </Tooltip.Trigger>
+                <Tooltip.Portal>
+                  <Tooltip.Content className="tooltip_footer" sideOffset={5} side="bottom">
+                    <p>{item.type}</p>
+                  </Tooltip.Content>
+                </Tooltip.Portal>
+              </Tooltip.Root>
+            </Tooltip.Provider>
+
           ))}
         </ul>
         <p>

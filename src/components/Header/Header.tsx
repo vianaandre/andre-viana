@@ -1,11 +1,17 @@
 import { Container } from 'components/Container';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { menuOptions } from 'common/data/header';
 import Link from 'next/link';
 
 import { ContainerHeader, ContainerHeaderNav } from './styles';
 
 export const Header: React.FC = () => {
+  const [isActiveLink, setIsActiveLink] = useState<string>();
+
+  useEffect(() => {
+    setIsActiveLink(window.location.pathname);
+  }, []);
+
   return (
     <ContainerHeader>
       <Container>
@@ -20,7 +26,7 @@ export const Header: React.FC = () => {
         <ContainerHeaderNav>
           <ul>
             {menuOptions.map((item) => (
-              <li key={item.link}>
+              <li key={item.link} className={`${isActiveLink === item.link ? 'active' : 'not_active'}`}>
                 <Link href={item.link}>
                   <a data-replace={item.text}>
                     <p>{item.text}</p>

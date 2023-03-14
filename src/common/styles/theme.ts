@@ -6,6 +6,7 @@ export const theme = {
     grey: {
       dark: '#7A797D',
       main: '#565660',
+      light: 'rgba(122, 121, 125, 0.5)',
     },
     primary: {
       main: '#F3F3F3',
@@ -26,6 +27,7 @@ export const theme = {
       main: '#8AFF80',
     },
     success: '#0FAB60',
+    success_light: 'rgba(15, 171, 96, 0.1)',
     warning: '#FAAD13',
     danger: '#E95432',
     info: '#00B8D9',
