@@ -26,7 +26,7 @@ export function useForm(): useFormProps {
     try {
       setIsLoading(true);
       if (isDataForm.email && isDataForm.email !== '' && isDataForm.name && isDataForm.name !== '') {
-        await axios.post('https://27yxhjmv39.execute-api.us-east-1.amazonaws.com/dev/sendMail', {
+        await axios.post('https://uzer-ticket.herokuapp.com/https://27yxhjmv39.execute-api.us-east-1.amazonaws.com/dev/sendMail', {
           email: isDataForm.email,
           name: isDataForm.name,
           subject: 'Assunto',
