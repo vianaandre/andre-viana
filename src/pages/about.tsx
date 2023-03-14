@@ -9,7 +9,7 @@ const About: NextPage = () => {
   return (
     <Base>
       <SEO
-        title="André Viana // Sobre"
+        title="Sobre // André Viana"
         description="Desenvolvedor apaixonado por criação de aplicações web, com foco em responsividade, desempenho e qualidade. Sempre em busca de desafios novos"
         image="favicon.png"
         url="https://vianaandre.com/about"

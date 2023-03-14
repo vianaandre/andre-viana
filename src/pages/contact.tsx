@@ -8,7 +8,7 @@ const Contact: NextPage = () => {
   return (
     <Base>
       <SEO
-        title="André Viana // Contato"
+        title="Contato // André Viana"
         description="André Viana | andredapperviana@gmail.com &amp; +55 (45) 98837-8294"
         image="favicon.png"
         url="https://vianaandre.com/contact"

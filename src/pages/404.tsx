@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <SEO
-        title="André Viana // 404"
+        title="404 // André Viana"
         description="Página não encontrada."
         image="favicon.png"
         url="https://vianaandre.com/404"

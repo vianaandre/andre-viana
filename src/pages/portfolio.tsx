@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Base>
       <SEO
-        title="André Viana // Portfólio"
+        title="Portfólio // André Viana"
         description="Desenvolvedor web, especialista em desenvolvimento de aplicações web com foco em responsividade, desempenho e qualidade."
         image="favicon.png"
         url="https://vianaandre.com/portfolio"
