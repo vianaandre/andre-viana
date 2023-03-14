@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import Link from 'next/link';
