@@ -4,11 +4,6 @@ export const ContainerCardProject = styled.div`
     display: flex;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary.light};
     width: 50%;
-    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        flex-direction: column;
-        gap: ${({ theme }) => theme.spacing(4)};
-        padding-bottom: ${({ theme }) => theme.spacing(7)};
-    }
     &:nth-child(even) {
         border-left: 1px solid ${({ theme }) => theme.colors.primary.light};
         padding-right: 0px;
@@ -81,6 +76,8 @@ export const ContainerCardProject = styled.div`
         }
     }
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        flex-direction: column;
+        padding-bottom: ${({ theme }) => theme.spacing(7)};
         padding-right: 0px;
         gap: ${({ theme }) => theme.spacing(3)};
         width: 100%;

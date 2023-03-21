@@ -32,7 +32,7 @@ export const ContainerPortfolioLayout = styled.section`
             /* gap: ${({ theme }) => theme.spacing(9)}; */;
             @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
                 margin-top: ${({ theme }) => theme.spacing(7)};
-                gap: ${({ theme }) => theme.spacing(7)};
+                gap: 0px;
             }
         }
         div.action {
