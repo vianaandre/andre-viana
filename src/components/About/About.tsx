@@ -88,7 +88,7 @@ export const AboutLayout: React.FC = () => {
           </div>
           <div className="skills">
             <h4 className="title">Habilidades</h4>
-            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL</p>
+            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
           </div>
           <div className="bio">
             <h4 className="title">Bio</h4>
