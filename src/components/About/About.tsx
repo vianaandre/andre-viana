@@ -4,11 +4,10 @@ import * as Tooltip from '@radix-ui/react-tooltip';
 import Lottie from 'lottie-react';
 
 import { Container } from 'components/Container';
-import myPhoto from 'common/assets/zyro-image.png';
+import myPhoto from 'common/assets/my-photo.png';
 import Link from 'next/link';
 import { career } from 'common/data/about';
-import { ScrollIndicator } from 'components/ScrollIndicator';
-import article from 'common/assets/lordIcon/article.json';
+import article from 'common/assets/lordIcon/about.json';
 import { ContainerAbout } from './styles';
 import { useAbout } from './useAbout';
 
@@ -18,11 +17,16 @@ export const AboutLayout: React.FC = () => {
   return (
     <ContainerAbout>
       <Container>
-        <ScrollIndicator />
         <div className="content">
           <h2 className="title">Sobre. Bio. Carreira.</h2>
           <div className="info_about">
-            <Image src={myPhoto.src} height={myPhoto.height} width={myPhoto.width} alt="Minha Foto" />
+            <Image
+              src={myPhoto.src}
+              height={myPhoto.height}
+              width={myPhoto.width}
+              alt="Minha Foto"
+              priority
+            />
             <div className="text">
               <p>
                 Olá, eu sou o
@@ -81,6 +85,10 @@ export const AboutLayout: React.FC = () => {
                 </a>
               </Link>
             </div>
+          </div>
+          <div className="skills">
+            <h4 className="title">Habilidades</h4>
+            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL</p>
           </div>
           <div className="bio">
             <h4 className="title">Bio</h4>

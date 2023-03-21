@@ -73,6 +73,11 @@ export const ContainerAbout = styled.section`
             img {
                 height: 380px !important;
             }
+            svg {
+                path {
+                    fill: ${({ theme }) => theme.colors.primary.dark};
+                }
+            }
         }
         div.bio {
             margin-top: ${({ theme }) => theme.spacing(4)};
@@ -149,6 +154,15 @@ export const ContainerAbout = styled.section`
                         color: ${({ theme }) => theme.colors.grey.dark};
                     }
                 }
+            }
+        }
+        div.skills {
+            margin-top: ${({ theme }) => theme.spacing(4)};
+            p {
+                font-size: ${({ theme }) => theme.fonts.sizes[16]};
+                font-style: normal;
+                margin-top: ${({ theme }) => theme.spacing(2)};
+                color: ${({ theme }) => theme.colors.grey.dark};
             }
         }
     }

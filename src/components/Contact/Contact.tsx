@@ -1,14 +1,12 @@
 import React from 'react';
 
 import { Container } from 'components/Container';
-import { ScrollIndicator } from 'components/ScrollIndicator';
 import { ContainerContact } from './styles';
 import { Form } from './Form';
 
 export const Contact: React.FC = () => {
   return (
     <ContainerContact>
-      <ScrollIndicator />
       <Container>
         <div className="content">
           <h2 className="title">Me mande um E-mail</h2>

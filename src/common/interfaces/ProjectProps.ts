@@ -3,7 +3,4 @@ export interface ProjectProps {
     description: string;
     technologies: string;
     link: string;
-    image: string;
-    imageMobile: string;
-    bgColor: string;
 }

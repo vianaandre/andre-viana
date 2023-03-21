@@ -214,5 +214,27 @@ export const GlobalStyles = createGlobalStyle`
             transform: translateX(calc(100% + var(--viewport-padding)));
         }
     }
+    @keyframes animationLoading {
+        0% {
+            width: 16px;
+            transform: translateX(0px);
+        }
+        40% {
+            width: 25px;
+            transform: translateX(0px);
+        }
 
+        80% {
+            width: 16px;
+            transform: translateX(64px);
+        }
+        90% {
+            width: 25px;
+            transform: translateX(0px);
+        }
+        100% {
+            width: 16px;
+            transform: translateX(0px);
+        }
+    }
 `;
