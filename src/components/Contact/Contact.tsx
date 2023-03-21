@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
     <ContainerContact>
       <Container>
         <div className="content">
-          <h2 className="title">Me mande um E-mail</h2>
+          <h2 className="title">Me mande um E-mail.</h2>
           <p>
             Entre em contato comigo para tirar
             {' '}

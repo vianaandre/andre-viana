@@ -18,7 +18,7 @@ export const AboutLayout: React.FC = () => {
     <ContainerAbout>
       <Container>
         <div className="content">
-          <h2 className="title">Sobre. Bio. Carreira.</h2>
+          <h2 className="title">Sobre. Habilidades. Bio. Carreira.</h2>
           <div className="info_about">
             <Image
               src={myPhoto.src}
