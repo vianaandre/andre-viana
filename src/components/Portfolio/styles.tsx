@@ -29,14 +29,13 @@ export const ContainerPortfolioLayout = styled.section`
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-            /* gap: ${({ theme }) => theme.spacing(9)}; */;
             @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
                 margin-top: ${({ theme }) => theme.spacing(7)};
                 gap: 0px;
             }
         }
         div.action {
-            margin-top: ${({ theme }) => theme.spacing(8)};
+            margin-top: ${({ theme }) => theme.spacing(12)};
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -67,6 +66,9 @@ export const ContainerPortfolioLayout = styled.section`
                     transition: ${({ theme }) => theme.transitions.medium};
                     width: 100%;
                 }
+            }
+            @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                margin-top: ${({ theme }) => theme.spacing(9)};
             }
         }
     }

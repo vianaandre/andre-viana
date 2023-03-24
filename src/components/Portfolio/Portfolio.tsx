@@ -40,7 +40,7 @@ export const PortfolioLayout: React.FC = () => {
               e negociar para colocá-las em
               {' '}
               <strong>prática</strong>
-              ..
+              .
             </p>
             <Tooltip.Provider delayDuration={100}>
               <Tooltip.Root>

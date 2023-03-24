@@ -9,6 +9,9 @@ export const ContainerCardProject = styled.div`
         padding-right: 0px;
         padding-left: ${({ theme }) => theme.spacing(6)};
     }
+    &:nth-child(3), &:nth-child(4) {
+        border-bottom: none;
+    }
     padding-top: ${({ theme }) => theme.spacing(6)};
     padding-bottom: ${({ theme }) => theme.spacing(6)};
     padding-right: ${({ theme }) => theme.spacing(6)};
@@ -81,10 +84,16 @@ export const ContainerCardProject = styled.div`
         padding-right: 0px;
         gap: ${({ theme }) => theme.spacing(3)};
         width: 100%;
+        p {
+            min-height: fit-content;
+        }
         &:nth-child(even) {
             border-left: 0px;
             padding-right: 0px;
             padding-left: 0px;
+        }
+        &:nth-child(3) {
+            border-bottom: 1px solid ${({ theme }) => theme.colors.primary.light};
         }
     }
 `;
