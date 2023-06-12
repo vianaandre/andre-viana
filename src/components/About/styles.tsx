@@ -20,19 +20,31 @@ export const ContainerAbout = styled.section`
                 flex-direction: column;
                 align-items: flex-start;
                 gap: ${({ theme }) => theme.spacing(5)};
-                img {
-                    min-width: fit-content !important;
-                }
             }
             img {
                 border-radius: 4px !important;
+                width: 50%;
+                object-fit: cover;
+                @media(max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+                    width: 55%;
+                }
+                @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                    width: 100%;
+                    display: flex;
+                }
             }
             div.text {
                 flex: 1;
                 padding-left: ${({ theme }) => theme.spacing(4)};
                 display: flex;
                 flex-direction: column;
-                height: 380px;
+                height: 440px;
+                @media(max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+                    height: 521px;
+                }
+                @media(max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+                    padding-left: ${({ theme }) => theme.spacing(2)};
+                }
                 @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
                     padding-left: 0px;
                 }
@@ -46,6 +58,9 @@ export const ContainerAbout = styled.section`
                         color: ${({ theme }) => theme.colors.primary.dark};
                         font-weight: ${({ theme }) => theme.fonts.weight.bold};
                     }
+                    @media(max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+                        line-height: ${({ theme }) => theme.fonts.height[150]};
+                    }
                 }
                 a {
                     margin-top: auto;
@@ -58,6 +73,9 @@ export const ContainerAbout = styled.section`
                     position: relative;
                     width: 152px;
                     border-radius: ${({ theme }) => theme.radii.min};
+                    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                        margin-top: ${({ theme }) => theme.spacing(3)};
+                    }
                     lord-icon {
                         bottom: 0px;
                         width: 100% !important;
@@ -65,13 +83,7 @@ export const ContainerAbout = styled.section`
                         padding-left: ${({ theme }) => theme.spacing(5.5)};
                         position: absolute;
                     }
-                    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-                        margin-top: ${({ theme }) => theme.spacing(3.5)};
-                    }
                 }
-            }
-            img {
-                height: 380px !important;
             }
             svg {
                 path {

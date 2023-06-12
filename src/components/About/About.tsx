@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import Lottie from 'lottie-react';
 
@@ -20,12 +19,9 @@ export const AboutLayout: React.FC = () => {
         <div className="content">
           <h2 className="title">Sobre. Habilidades. Bio. Carreira.</h2>
           <div className="info_about">
-            <Image
+            <img
               src={myPhoto.src}
-              height={myPhoto.height}
-              width={myPhoto.width}
               alt="Minha Foto"
-              priority
             />
             <div className="text">
               <p>
@@ -37,22 +33,25 @@ export const AboutLayout: React.FC = () => {
                 <br />
                 Atualmente, atuo como desenvolvedor
                 {' '}
-                <strong>full-stack</strong>
+                <strong>Front-end/Mobile</strong>
                 {' '}
                 na
                 {' '}
-                <strong>Medcloud</strong>
+                <strong>Private Code®</strong>
                 {' '}
                 e também trabalho como
                 {' '}
-                <strong>freelancer</strong>
+                <strong>Freelancer</strong>
                 {' '}
-                com foco no desenvolvimento front-end, utilizando stacks como
+                na área. Minhas habilidades incluem o uso de tecnologias como
                 {' '}
                 <strong>ReactJs</strong>
                 ,
                 {' '}
                 <strong>NextJS</strong>
+                ,
+                {' '}
+                <strong>React Native</strong>
                 ,
                 {' '}
                 <strong>NodeJs</strong>
@@ -63,7 +62,7 @@ export const AboutLayout: React.FC = () => {
                 .
                 <br />
                 <br />
-                Nascido no Brasil e com 20 anos de idade, tenho uma grande paixão pelo desenvolvimento front-end, em especial a criação de aplicações web. Nos meus momentos de lazer, costumo assistir filmes e séries.
+                Nascido no Brasil e com 20 anos de idade, tenho uma grande paixão pelo desenvolvimento de produtos digitais. Nos meus momentos de lazer, costumo assistir filmes e séries.
               </p>
               <Link href="CV-Andre.pdf" download role="button">
                 <a
@@ -88,12 +87,12 @@ export const AboutLayout: React.FC = () => {
           </div>
           <div className="skills">
             <h4 className="title">Habilidades</h4>
-            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
+            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; React Native; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
           </div>
           <div className="bio">
             <h4 className="title">Bio</h4>
             <blockquote>
-              Desenvolvedor Full-Stack, especialista em desenvolvimento de aplicações web, com foco em responsividade, desempenho e qualidade. Sempre comprometido em proporcionar a melhor experiência possível para o usuário.
+              Como desenvolvedor Front-end/mobile, sou especialista no desenvolvimento de aplicações web e mobile, com um foco especial em responsividade, desempenho e qualidade. Meu objetivo é sempre proporcionar a melhor experiência possível para o usuário, garantindo que as aplicações sejam visualmente atraentes, funcionais e de alto desempenho. Estou comprometido em acompanhar as melhores práticas da indústria e me manter atualizado com as mais recentes tecnologias e tendências no campo do desenvolvimento Front-end/mobile.
             </blockquote>
           </div>
           <div className="career">
