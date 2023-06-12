@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { theme } from 'common/styles/theme';
 import { SEOProps } from './types';
 
 export const SEO: React.FC<SEOProps> = ({
@@ -17,9 +18,9 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="apple-mobile-web-app-title" content={title} />
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content="#05B59D" />
+      <meta name="msapplication-TileColor" content={theme.colors.purble.main} />
       <meta name="msapplication-tap-highlight" content="no" />
-      <meta name="theme-color" content="#05B59D" />
+      <meta name="theme-color" content={theme.colors.purble.main} />
       <meta
         httpEquiv="Content-Type"
         content="text/html; charset=utf-8"
@@ -49,7 +50,7 @@ export const SEO: React.FC<SEOProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href={image} />
       <link rel="apple-touch-icon" sizes="167x167" href={image} />
       <link rel="icon" type="image/png" sizes="32x32" href={image} />
-      <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#05B59D" />
+      <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color={theme.colors.purble.main} />
       <link
         rel="shortcut icon"
         href="favicon.png"
