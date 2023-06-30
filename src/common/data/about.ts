@@ -1,6 +1,6 @@
 export const career = [
   {
-    office: 'Desenvolvedor Front-end/Mobile',
+    office: 'Desenvolvedor Full-Stack/Mobile',
     company: {
       text: 'Private Code®',
       link: 'https://privatecode.com.br/',

@@ -33,7 +33,7 @@ export const AboutLayout: React.FC = () => {
                 <br />
                 Atualmente, atuo como desenvolvedor
                 {' '}
-                <strong>Front-end/Mobile</strong>
+                <strong>Full-Stack/Mobile</strong>
                 {' '}
                 na
                 {' '}
@@ -87,12 +87,12 @@ export const AboutLayout: React.FC = () => {
           </div>
           <div className="skills">
             <h4 className="title">Habilidades</h4>
-            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; React Native; Styled-Components; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
+            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; React Native; Styled-Components; PHP; Laravel; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
           </div>
           <div className="bio">
             <h4 className="title">Bio</h4>
             <blockquote>
-              Como desenvolvedor Front-end/mobile, sou especialista no desenvolvimento de aplicações web e mobile, com um foco especial em responsividade, desempenho e qualidade. Meu objetivo é sempre proporcionar a melhor experiência possível para o usuário, garantindo que as aplicações sejam visualmente atraentes, funcionais e de alto desempenho. Estou comprometido em acompanhar as melhores práticas da indústria e me manter atualizado com as mais recentes tecnologias e tendências no campo do desenvolvimento Front-end/mobile.
+              Como desenvolvedor Full-Stack/mobile, sou especialista no desenvolvimento de aplicações web e mobile, com um foco especial em responsividade, desempenho e qualidade. Meu objetivo é sempre proporcionar a melhor experiência possível para o usuário, garantindo que as aplicações sejam visualmente atraentes, funcionais e de alto desempenho. Estou comprometido em acompanhar as melhores práticas da indústria e me manter atualizado com as mais recentes tecnologias e tendências no campo do desenvolvimento Full-Stack/mobile.
             </blockquote>
           </div>
           <div className="career">
