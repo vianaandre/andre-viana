@@ -23,6 +23,8 @@ export const Apresentation: React.FC = () => {
                 1000,
                 'Full-Stack',
                 1000,
+                'Mobile',
+                1000,
               ]}
               speed={50}
               style={{ fontSize: theme.fonts.sizes[20], fontWeight: theme.fonts.weight.light }}
