@@ -1,12 +1,21 @@
 export const career = [
   {
+    office: 'Desenvolvedor Full-Stack Pleno',
+    company: {
+      text: 'Pagou.ai',
+      link: 'https://pagou.ai/',
+    },
+    locale: 'Remoto',
+    time: 'Fevereiro 2024 - Presente',
+  },
+  {
     office: 'Desenvolvedor Full-Stack/Mobile',
     company: {
       text: 'Private Code®',
       link: 'https://privatecode.com.br/',
     },
     locale: 'Remoto',
-    time: 'Maio 2023 - Presente',
+    time: 'Maio 2023 - Fevereiro 2024 • 10 meses',
   },
   {
     office: 'Desenvolvedor Full-Stack',
