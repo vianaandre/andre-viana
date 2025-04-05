@@ -267,6 +267,7 @@ export const ContainerAbout = styled.section`
         }
         span.stacks {
             color: ${({ theme }) => theme.colors.primary.dark} !important;
+            font-weight: ${({ theme }) => theme.fonts.weight.medium} !important;
         }
     }
 `;
