@@ -7,6 +7,7 @@ import myPhoto from 'common/assets/my-photo.png';
 import Link from 'next/link';
 import { career } from 'common/data/about';
 import article from 'common/assets/lordIcon/about.json';
+import { projects } from 'common/data/portfolio';
 import { ContainerAbout } from './styles';
 import { useAbout } from './useAbout';
 
@@ -17,52 +18,62 @@ export const AboutLayout: React.FC = () => {
     <ContainerAbout>
       <Container>
         <div className="content">
-          <h2 className="title">Sobre. Habilidades. Bio. Carreira.</h2>
-          <div className="info_about">
+          <div className="container_titles">
+            <a className="title" href="#sobre">Sobre.</a>
+            <a className="title" href="#habilidades">Habilidades.</a>
+            <a className="title" href="#bio">Bio.</a>
+            <a className="title" href="#carreira">Carreira.</a>
+            <a className="title" href="#projetos">Projetos.</a>
+          </div>
+          {/* <h2 className="title">Sobre. Habilidades. Bio. Carreira. Projetos.</h2> */}
+          <div className="info_about" id="sobre">
             <img
               src={myPhoto.src}
               alt="Minha Foto"
             />
             <div className="text">
               <p>
-                Olá, eu sou o
+                Olá! Sou
                 {' '}
                 <strong>André Viana</strong>
-                , um engenheiro de software que iniciou sua carreira como desenvolvedor front-end em 2022.
+                , engenheiro de software com mais de
+                {' '}
+                <strong>4 anos de experiência</strong>
+                {' '}
+                no desenvolvimento de aplicações web e
+                {' '}
+                <strong>2 anos de experiência</strong>
+                {' '}
+                no desenvolvimento de aplicativos.
                 <br />
                 <br />
-                Atualmente, atuo como desenvolvedor
+                Tenho domínio de tecnologias como
                 {' '}
-                <strong>Full-Stack/Mobile</strong>
-                {' '}
-                na
-                {' '}
-                <strong>Private Code®</strong>
-                {' '}
-                e também trabalho como
-                {' '}
-                <strong>Freelancer</strong>
-                {' '}
-                na área. Minhas habilidades incluem o uso de tecnologias como
-                {' '}
-                <strong>ReactJs</strong>
+                <strong>React.js</strong>
                 ,
                 {' '}
-                <strong>NextJS</strong>
+                <strong>Next.js</strong>
                 ,
                 {' '}
                 <strong>React Native</strong>
                 ,
                 {' '}
-                <strong>NodeJs</strong>
+                <strong>Node.js</strong>
                 {' '}
                 e
                 {' '}
                 <strong>AWS</strong>
-                .
+                , e sou apaixonado por criar soluções robustas, modernas e que realmente façam diferença na rotina das pessoas.
                 <br />
                 <br />
-                Nascido no Brasil e com 20 anos de idade, tenho uma grande paixão pelo desenvolvimento de produtos digitais. Nos meus momentos de lazer, costumo assistir filmes e séries.
+                Atualmente, atuo na
+                {' '}
+                <strong>Pagou.ai</strong>
+                ,
+                {' '}
+                onde contribuo para a construção de um sistema de checkout para processamento de pagamentos, focando em performance, escalabilidade e experiência do usuário.
+                <br />
+                <br />
               </p>
               <Link href="CV-Andre.pdf" download role="button">
                 <a
@@ -85,17 +96,17 @@ export const AboutLayout: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="skills">
+          <div className="skills" id="habilidades">
             <h4 className="title">Habilidades</h4>
-            <p>HTML; CSS; Javascript; Typescript; ReactJs; NextJs; React Native; Styled-Components; PHP; Laravel; Bootstrap; Material-UI; NodeJs; AWS; GraphQL; Cypress; Jest; Docker; MySQL.</p>
+            <p>Javascript; Typescript; React.js; Next.js; React Native; TanStack; Material-UI; Tailwind; Node.js; PHP; Laravel; Bootstrap; AWS; GraphQL; Cypress; Jest; Docker; MySQL; PostgreSQL; Clean Code; TDD.</p>
           </div>
-          <div className="bio">
+          <div className="bio" id="bio">
             <h4 className="title">Bio</h4>
             <blockquote>
-              Como desenvolvedor Full-Stack/mobile, sou especialista no desenvolvimento de aplicações web e mobile, com um foco especial em responsividade, desempenho e qualidade. Meu objetivo é sempre proporcionar a melhor experiência possível para o usuário, garantindo que as aplicações sejam visualmente atraentes, funcionais e de alto desempenho. Estou comprometido em acompanhar as melhores práticas da indústria e me manter atualizado com as mais recentes tecnologias e tendências no campo do desenvolvimento Full-Stack/mobile.
+              Como desenvolvedor Front-end, sou especializado na criação de aplicações web e mobile com foco em responsividade, performance e qualidade de código. Busco sempre oferecer a melhor experiência ao usuário, entregando interfaces intuitivas, atraentes e altamente funcionais. Sou comprometido com as melhores práticas da engenharia de software e estou em constante evolução, acompanhando as tendências e tecnologias mais recentes no ecossistema front-end.
             </blockquote>
           </div>
-          <div className="career">
+          <div className="career" id="carreira">
             <h4 className="title">Carreira</h4>
             <ul>
               {career.map((item) => (
@@ -120,6 +131,57 @@ export const AboutLayout: React.FC = () => {
                     {item.locale}
                   </p>
                   <span>{item.time}</span>
+                  <p className="describe">{item.describe}</p>
+                  <span className="stacks">
+                    Tecnologias:
+                    {' '}
+                    {item.stacks}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="project" id="projetos">
+            <h4 className="title">Projetos</h4>
+            <ul>
+              {projects.map((project) => (
+                <li key={project.title}>
+                  <h6>
+                    {project.title}
+                    {' '}
+                    <b>
+                      •
+                      {' '}
+                      {project.type}
+                    </b>
+                  </h6>
+                  <div className="links">
+                    {project.links.map((link) => (
+                      <>
+                        <p key={link}>
+                          <Tooltip.Provider delayDuration={100}>
+                            <Tooltip.Root>
+                              <Tooltip.Trigger asChild>
+                                <a href={link} target="_black">{link}</a>
+                              </Tooltip.Trigger>
+                              <Tooltip.Portal>
+                                <Tooltip.Content className="tooltip_footer" sideOffset={5} side="bottom">
+                                  <p>{link}</p>
+                                </Tooltip.Content>
+                              </Tooltip.Portal>
+                            </Tooltip.Root>
+                          </Tooltip.Provider>
+                        </p>
+                        {project.links.length > 1 && (
+                          <p className="divider_point">
+                            •
+                          </p>
+                        )}
+                      </>
+                    ))}
+                  </div>
+                  <p className="describe">{project.description}</p>
+                  <span className="stacks">{project.technologies}</span>
                 </li>
               ))}
             </ul>

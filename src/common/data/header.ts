@@ -5,11 +5,6 @@ export const menuOptions = [
     alternative: 'about',
   },
   {
-    link: '/portfolio',
-    text: 'portfólio',
-    alternative: 'portfolio',
-  },
-  {
     link: '/contact',
     text: 'contato',
     alternative: 'contact',

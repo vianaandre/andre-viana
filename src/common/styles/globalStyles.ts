@@ -61,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
         opacity: 0.6;
         cursor: not-allowed;
     }
-    h2.title {
+    h2.title, a.title {
         font-size: ${({ theme }) => theme.fonts.sizes[36]};
         font-weight: ${({ theme }) => theme.fonts.weight.bold};
         font-style: normal;
@@ -189,6 +189,17 @@ export const GlobalStyles = createGlobalStyle`
     }
     .toast_root[data-swipe='end'] {
         animation: swipeOut 100ms ease-out;
+    }
+    div.badge-skills div {
+        padding: 2px 4px;
+        border-radius: 4px;
+        display: flex;
+        width: fit-content;
+        font-size: 12px;
+        border: 1px solid ${({ theme }) => theme.colors.primary.dark};
+    }
+    div.badge-skills div p {
+        margin-top: 0px !important;
     }
     @keyframes hide {
         from {

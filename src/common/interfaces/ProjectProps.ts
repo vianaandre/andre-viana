@@ -2,5 +2,6 @@ export interface ProjectProps {
     title: string;
     description: string;
     technologies: string;
-    link: string;
+    links: string[];
+    type: string;
 }

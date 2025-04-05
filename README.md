@@ -3,7 +3,6 @@
 **Seções**
 - Página Inicial - [André Viana](https://andre-viana.vercel.app/)
 - Sobre - [Sobre // André Viana](https://andre-viana.vercel.app/about)
-- Portfólio - [Portfólio // André Viana](https://andre-viana.vercel.app/portfolio)
 - Contato - [Contato // André Viana](https://andre-viana.vercel.app/contact)
 
 <hr />

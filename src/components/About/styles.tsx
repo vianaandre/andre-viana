@@ -4,17 +4,47 @@ export const ContainerAbout = styled.section`
     margin-top: ${({ theme }) => theme.spacing(9)};
     margin-bottom: ${({ theme }) => theme.spacing(12.75)};
 
-    h2.title {
-        background-image: linear-gradient(180deg, ${({ theme }) => theme.colors.purble.main} 0%, ${({ theme }) => theme.colors.pink.main} 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+    div.container_titles {
+        display: flex;
+        gap: ${({ theme }) => theme.spacing(1)};
+        a.title {
+            background-image: linear-gradient(
+                180deg,
+                ${({ theme }) => theme.colors.purble.main} 0%,
+                ${({ theme }) => theme.colors.pink.main} 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            text-decoration: none;
+            line-height: 120%;
+        }
+        a.title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(
+                90deg,
+                ${({ theme }) => theme.colors.purble.main} 0%,
+                ${({ theme }) => theme.colors.pink.main} 100%
+            );
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
+        }
+        a.title:hover::after {
+            transform: scaleX(1);
+        }
     }
     div.content {
         flex-direction: column;
         div.info_about {
-            margin-top: ${({ theme }) => theme.spacing(4)};
+            padding-top: ${({ theme }) => theme.spacing(4)};
             display: flex;
             @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
                 flex-direction: column;
@@ -92,7 +122,7 @@ export const ContainerAbout = styled.section`
             }
         }
         div.bio {
-            margin-top: ${({ theme }) => theme.spacing(4)};
+            padding-top: ${({ theme }) => theme.spacing(4)};
             blockquote {
                 margin-top: ${({ theme }) => theme.spacing(3)};
                 font-size:  ${({ theme }) => theme.fonts.sizes[16]};
@@ -133,7 +163,7 @@ export const ContainerAbout = styled.section`
             }
         }
         div.career {
-            margin-top: ${({ theme }) => theme.spacing(4)};
+            padding-top: ${({ theme }) => theme.spacing(4)};
             ul {
                 margin-top: ${({ theme }) => theme.spacing(2)};
                 display: flex;
@@ -165,17 +195,78 @@ export const ContainerAbout = styled.section`
                         font-weight: ${({ theme }) => theme.fonts.weight.regular};
                         color: ${({ theme }) => theme.colors.grey.dark};
                     }
+                    p.describe {
+                        margin: ${({ theme }) => theme.spacing(1)} 0px;
+                    }
                 }
             }
         }
         div.skills {
-            margin-top: ${({ theme }) => theme.spacing(4)};
+            padding-top: ${({ theme }) => theme.spacing(4)};
             p {
                 font-size: ${({ theme }) => theme.fonts.sizes[16]};
                 font-style: normal;
                 margin-top: ${({ theme }) => theme.spacing(2)};
                 color: ${({ theme }) => theme.colors.grey.dark};
             }
+        }
+        div.project {
+            padding-top: ${({ theme }) => theme.spacing(4)};
+            ul {
+                margin-top: ${({ theme }) => theme.spacing(2)};
+                display: flex;
+                flex-direction: column;
+                gap: ${({ theme }) => theme.spacing(4)};
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    p {
+                        font-size: ${({ theme }) => theme.fonts.sizes[14]};
+                        font-style: normal;
+                        font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                        color: ${({ theme }) => theme.colors.grey.dark};
+                        a {
+                            color: ${({ theme }) => theme.colors.primary.dark};
+                            text-decoration: underline;
+                        }
+                    }
+                    h6 {
+                        font-size: ${({ theme }) => theme.fonts.sizes[16]};
+                        font-style: normal;
+                        font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                        color: ${({ theme }) => theme.colors.primary.dark};
+                        b {
+                            font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                            color: ${({ theme }) => theme.colors.grey.dark};
+                        }
+                    }
+                    span {
+                        font-size: ${({ theme }) => theme.fonts.sizes[14]};
+                        font-style: normal;
+                        font-weight: ${({ theme }) => theme.fonts.weight.regular};
+                        color: ${({ theme }) => theme.colors.grey.dark};
+                    }
+                    div.links {
+                        display: flex;
+                        gap: ${({ theme }) => theme.spacing(0.5)};
+                        align-items: center;
+                        flex-wrap: wrap;
+                        @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                            gap: ${({ theme }) => theme.spacing(1)};
+                        }
+                        p.divider_point:last-child {
+                            display: none;
+                        }
+                    }
+                    p.describe {
+                        margin: ${({ theme }) => theme.spacing(1)} 0px;
+                    }
+                }
+            }
+        }
+        span.stacks {
+            color: ${({ theme }) => theme.colors.primary.dark} !important;
         }
     }
 `;

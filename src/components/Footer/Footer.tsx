@@ -54,7 +54,9 @@ export const Footer: React.FC = () => {
           ))}
         </ul>
         <p>
-          © André Viana 2023
+          © André Viana
+          {' '}
+          {new Date().getFullYear()}
         </p>
       </Container>
     </ContainerFooter>
